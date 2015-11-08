@@ -6,8 +6,9 @@ class CreateTasks < ActiveRecord::Migration
       t.integer :Priority
       t.date :DueDate
       t.boolean :IsCompleteToggle
+      t.integer :task_list_id
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

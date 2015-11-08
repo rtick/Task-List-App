@@ -4,7 +4,7 @@ class CreateTaskLists < ActiveRecord::Migration
       t.string :Name
       t.text :Description
 
-      t.timestamps
+      t.timestamps null: false
     end
   end
 end

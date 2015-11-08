@@ -1,1 +1,1 @@
-json.extract! @task, :id, :Title, :Description, :Priority, :DueDate, :IsCompleteToggle, :created_at, :updated_at
+json.extract! @task, :id, :Title, :Description, :Priority, :DueDate, :IsCompleteToggle, :task_list_id, :created_at, :updated_at

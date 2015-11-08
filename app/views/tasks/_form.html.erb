@@ -31,6 +31,10 @@
     <%= f.label :IsCompleteToggle %><br>
     <%= f.check_box :IsCompleteToggle %>
   </div>
+  <div class="field">
+    <%= f.label :task_list_id %><br>
+    <%= f.collection_select :task_list_id, TaskList.all, :id, :name, prompt: true %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

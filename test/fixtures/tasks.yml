@@ -6,6 +6,7 @@ one:
   Priority: 1
   DueDate: 2015-11-08
   IsCompleteToggle: false
+  task_list_id: 1
 
 two:
   Title: MyString
@@ -13,3 +14,4 @@ two:
   Priority: 1
   DueDate: 2015-11-08
   IsCompleteToggle: false
+  task_list_id: 1
