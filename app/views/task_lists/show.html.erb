@@ -11,6 +11,7 @@
 </p>
 
 <ul>
+  <%# jarp:  what is "@task_lists"? Error says .tasks is not a method of nil (aka "@task_lists is nil)")  %>
 	<% @task_lists.tasks.each do |task|%>
 		<li>
 			<%= task.Title %>
