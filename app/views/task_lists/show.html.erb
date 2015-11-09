@@ -2,19 +2,19 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @task_list.Name %>
+  <%= @task_list.name %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @task_list.Description %>
+  <%= @task_list.description %>
 </p>
 
 <ul>
   <%# jarp:  what is "@task_lists"? Error says .tasks is not a method of nil (aka "@task_lists is nil)")  %>
 	<% @task_list.tasks.each do |task|%>
 		<li>
-			<%= task.Title %>
+			<%= task.title %>
 		</li>
 	<%end%>
 </ul>

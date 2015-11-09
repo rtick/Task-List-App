@@ -13,27 +13,27 @@
 
   <div class="field">
     <%= f.label :Title %><br>
-    <%= f.text_field :Title %>
+    <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :Description %><br>
-    <%= f.text_area :Description %>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :Priority %><br>
-    <%= f.number_field :Priority %>
+    <%= f.number_field :priority %>
   </div>
   <div class="field">
     <%= f.label :Due %><br>
-    <%= f.date_select :DueDate %>
+    <%= f.date_select :due_date %>
   </div>
   <div class="field">
     <%= f.label :Complete? %>
-    <%= f.check_box :IsCompleteToggle %>
+    <%= f.check_box :is_complete_toggle %>
   </div>
   <div class="field">
     <%= f.label :task_list_id %><br>
-    <%= f.collection_select :task_list_id, TaskList.all, :id, :Name, prompt: 'Please select a list...' %>
+    <%= f.collection_select :task_list_id, TaskList.all, :id, :name, prompt: 'Select' %>
   </div>
   <div class="actions">
     <%= f.submit %>

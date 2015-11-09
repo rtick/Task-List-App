@@ -14,18 +14,18 @@
 ActiveRecord::Schema.define(version: 20151108212722) do
 
   create_table "task_lists", force: true do |t|
-    t.string   "Name"
-    t.text     "Description"
+    t.string   "name"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   create_table "tasks", force: true do |t|
-    t.string   "Title"
-    t.text     "Description"
-    t.integer  "Priority"
-    t.date     "DueDate"
-    t.boolean  "IsCompleteToggle"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "priority"
+    t.date     "due_date"
+    t.boolean  "is_complete_toggle"
     t.integer  "task_list_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
