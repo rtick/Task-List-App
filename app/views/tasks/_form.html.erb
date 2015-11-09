@@ -24,16 +24,16 @@
     <%= f.number_field :Priority %>
   </div>
   <div class="field">
-    <%= f.label :DueDate %><br>
+    <%= f.label :Due %><br>
     <%= f.date_select :DueDate %>
   </div>
   <div class="field">
-    <%= f.label :IsCompleteToggle %><br>
+    <%= f.label :Complete? %>
     <%= f.check_box :IsCompleteToggle %>
   </div>
   <div class="field">
     <%= f.label :task_list_id %><br>
-    <%= f.collection_select :task_list_id, TaskList.all, :id, :name, prompt: true %>
+    <%= f.collection_select :task_list_id, TaskList.all, :id, :Name, prompt: 'Please select a list...' %>
   </div>
   <div class="actions">
     <%= f.submit %>
