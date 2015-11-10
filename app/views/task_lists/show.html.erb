@@ -11,14 +11,12 @@
 </p>
 
 <ul>
-  <%# jarp:  what is "@task_lists"? Error says .tasks is not a method of nil (aka "@task_lists is nil)")  %>
 	<% @task_list.tasks.each do |task|%>
 		<li>
 			<%= task.title %>
 		</li>
-	<%end%>
+	<% end %>	
 </ul>
-
 
 <%= link_to 'Edit', edit_task_list_path(@task_list) %> |
 <%= link_to 'Back', task_lists_path %>

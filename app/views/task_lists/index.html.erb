@@ -1,6 +1,8 @@
-<h1>Task List</h1>
+<p id="notice"><%= notice %></p>
 
-<table>
+<h1>Task Lists</h1>
+
+<table border="1" >
   <thead>
     <tr>
       <th>Name</th>
@@ -24,5 +26,5 @@
 
 <br>
 
-<%= link_to 'New Task List', new_task_list_path %>
-<%= link_to "Tasks", tasks_path %>
+<%= link_to 'New Task List', new_task_list_path %> <br>
+<%= link_to "View Tasks", tasks_path %>

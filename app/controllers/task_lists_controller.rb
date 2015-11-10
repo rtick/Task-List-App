@@ -28,7 +28,7 @@ class TaskListsController < ApplicationController
 
     respond_to do |format|
       if @task_list.save
-        format.html { redirect_to @task_list, notice: 'Task List was successfully created.' }
+        format.html { redirect_to @task_list, notice: 'Task list was successfully created.' }
         format.json { render :show, status: :created, location: @task_list }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class TaskListsController < ApplicationController
   def update
     respond_to do |format|
       if @task_list.update(task_list_params)
-        format.html { redirect_to @task_list, notice: 'Task List was successfully updated.' }
+        format.html { redirect_to @task_list, notice: 'Task list was successfully updated.' }
         format.json { render :show, status: :ok, location: @task_list }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class TaskListsController < ApplicationController
   def destroy
     @task_list.destroy
     respond_to do |format|
-      format.html { redirect_to task_lists_url, notice: 'Task List was successfully destroyed.' }
+      format.html { redirect_to task_lists_url, notice: 'Task list was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

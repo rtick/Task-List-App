@@ -11,24 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151108212722) do
+ActiveRecord::Schema.define(version: 20151110184705) do
 
-  create_table "task_lists", force: true do |t|
+  create_table "task_lists", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
-  create_table "tasks", force: true do |t|
+  create_table "tasks", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "priority"
     t.date     "due_date"
     t.boolean  "is_complete_toggle"
     t.integer  "task_list_id"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
   end
 
 end
