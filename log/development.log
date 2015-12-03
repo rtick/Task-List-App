@@ -5804,3 +5804,675 @@ ActionController::RoutingError (No route matches [GET] "/javascripts/default.js"
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
   Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (106.1ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 19:18:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (44.0ms)
+Completed 500 Internal Server Error in 8883ms (ActiveRecord: 4.0ms)
+
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    2: 	<head>
+    3: 		<title> Todo Listorama </title>
+    4: 		<%= stylesheet_link_tag 'site' %>
+    5: 		<%= javascript_include_tag 'application' %>
+    6: 		<%= csrf_meta_tags %>
+    7: 	</head>
+    8: 	
+  app/views/layouts/todo_list.html.erb:5:in `_app_views_layouts_todo_list_html_erb__222455577_49104096'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (80.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (60.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (142.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 19:19:06 -0500
+Processing by TaskListsController#index as HTML
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.0ms)
+Completed 500 Internal Server Error in 4113ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    2: 	<head>
+    3: 		<title> Todo Listorama </title>
+    4: 		<%= stylesheet_link_tag 'site' %>
+    5: 		<%= javascript_include_tag 'application' %>
+    6: 		<%= csrf_meta_tags %>
+    7: 	</head>
+    8: 	
+  app/views/layouts/todo_list.html.erb:5:in `_app_views_layouts_todo_list_html_erb__222455577_49104096'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (76.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 19:19:11 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.0ms)
+Completed 500 Internal Server Error in 4366ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    2: 	<head>
+    3: 		<title> Todo Listorama </title>
+    4: 		<%= stylesheet_link_tag 'site' %>
+    5: 		<%= javascript_include_tag 'application' %>
+    6: 		<%= csrf_meta_tags %>
+    7: 	</head>
+    8: 	
+  app/views/layouts/todo_list.html.erb:5:in `_app_views_layouts_todo_list_html_erb__222455577_49104096'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (76.0ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 19:19:15 -0500
+Processing by TaskListsController#index as HTML
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.0ms)
+Completed 500 Internal Server Error in 4428ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (TypeError: Object doesn't support this property or method):
+    2: 	<head>
+    3: 		<title> Todo Listorama </title>
+    4: 		<%= stylesheet_link_tag 'site' %>
+    5: 		<%= javascript_include_tag 'application' %>
+    6: 		<%= csrf_meta_tags %>
+    7: 	</head>
+    8: 	
+  app/views/layouts/todo_list.html.erb:5:in `_app_views_layouts_todo_list_html_erb__222455577_49104096'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.8ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (77.6ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 21:17:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (12.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 500 Internal Server Error in 264ms (ActiveRecord: 2.0ms)
+
+ActionView::Template::Error (undefined local variable or method `k' for #<#<Class:0x5f2ea68>:0x5f2e0d8>):
+    13: 			<h2> Task Lists </h2>
+    14: 			<ul>
+    15: +				<% @all_task_lists.each do |t| %>
+    16: +					<li><a href= <%= k %> > <%= k.name %> </a></li>
+    17: +				<% end %>
+    18: +			</ul>
+    19: 		</div>
+  app/views/layouts/todo_list.html.erb:16:in `block in _app_views_layouts_todo_list_html_erb__977010008_49816920'
+  app/views/layouts/todo_list.html.erb:15:in `_app_views_layouts_todo_list_html_erb__977010008_49816920'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (38.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.9ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (101.9ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 21:18:11 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `k' for #<#<Class:0x5f2ea68>:0x8f1fb58>):
+    13: 			<h2> Task Lists </h2>
+    14: 			<ul>
+    15: 				<% @all_task_lists.each do |t| %>
+    16: 					<li><a href= <%= k %> > <%= k.name %> </a></li>
+    17: 				<% end %>
+    18: 			</ul>
+    19: 		</div>
+  app/views/layouts/todo_list.html.erb:16:in `block in _app_views_layouts_todo_list_html_erb__977010008_75034944'
+  app/views/layouts/todo_list.html.erb:15:in `_app_views_layouts_todo_list_html_erb__977010008_75034944'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (39.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 21:18:13 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (5.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined local variable or method `k' for #<#<Class:0x5f2ea68>:0x9b33280>):
+    13: 			<h2> Task Lists </h2>
+    14: 			<ul>
+    15: 				<% @all_task_lists.each do |t| %>
+    16: 					<li><a href= <%= k %> > <%= k.name %> </a></li>
+    17: 				<% end %>
+    18: 			</ul>
+    19: 		</div>
+  app/views/layouts/todo_list.html.erb:16:in `block in _app_views_layouts_todo_list_html_erb__977010008_75034944'
+  app/views/layouts/todo_list.html.erb:15:in `_app_views_layouts_todo_list_html_erb__977010008_75034944'
+
+
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (40.1ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.9ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered C:/RailsInstaller/Ruby2.1.0/lib/ruby/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (81.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-02 21:18:29 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:18:29 -0500
+
+
+Started GET "/" for ::1 at 2015-12-02 21:26:29 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:26:29 -0500
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:26:30 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (213.1ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (217.1ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 256ms (Views: 255.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:26:32 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (3.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (6.0ms)
+  [1m[36mTaskList Load (1.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:26:32 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (3.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (6.0ms)
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:26:33 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (2.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:26:36 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (1.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:26:37 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (5.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (7.0ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:26:37 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (2.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 28ms (Views: 26.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:27:57 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (1.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (3.6ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:27:57 -0500
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:27:58 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (1.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (3.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 25ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:27:59 -0500
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:28:26 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (2.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mTaskList Load (1.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:28:26 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:28:33 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:28:34 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:28:35 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:28:35 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 33ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:28:36 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 35ms (Views: 33.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:28:49 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:28:49 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:29:11 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:29:11 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:30:21 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:30:21 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:30:45 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:30:46 -0500
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:30:53 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (2.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:31:07 -0500
+Processing by TaskListsController#index as HTML
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:31:07 -0500
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:31:08 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (4.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (7.0ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 29ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/1" for ::1 at 2015-12-02 21:31:14 -0500
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."task_list_id" = ?[0m  [["task_list_id", 1]]
+  Rendered task_lists/show.html.erb within layouts/todo_list (165.2ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 268ms (Views: 187.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:31:16 -0500
+Processing by TaskListsController#index as HTML
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/1/edit" for ::1 at 2015-12-02 21:31:18 -0500
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered task_lists/_form.html.erb (3.0ms)
+  Rendered task_lists/edit.html.erb within layouts/todo_list (7.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/task_lists/1" for ::1 at 2015-12-02 21:31:40 -0500
+Processing by TaskListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y8QOgfVkNRRuEOo3WoHP+VN4lXiWleBBUPmQT2hvi9Yk07OK750tFy/8gPMydNfAA9NLPNTeudSUEcP3SuLN/w==", "task_list"=>{"name"=>"General", "description"=>"This is our general list"}, "commit"=>"Update Task list", "id"=>"1"}
+  [1m[36mTaskList Load (1.0ms)[0m  [1mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTaskList Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "task_lists" WHERE ("task_lists"."name" = 'General' AND "task_lists"."id" != 1) LIMIT 1[0m
+  [1m[35mSQL (40.1ms)[0m  UPDATE "task_lists" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "task_lists"."id" = ?  [["name", "General"], ["description", "This is our general list"], ["updated_at", "2015-12-03 02:31:40.381917"], ["id", 1]]
+  [1m[36m (80.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/task_lists/1
+Completed 302 Found in 230ms (ActiveRecord: 121.4ms)
+
+
+Started GET "/task_lists/1" for ::1 at 2015-12-02 21:31:40 -0500
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mTask Load (1.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."task_list_id" = ?[0m  [["task_list_id", 1]]
+  Rendered task_lists/show.html.erb within layouts/todo_list (3.0ms)
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 34ms (Views: 30.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:31:44 -0500
+Processing by TaskListsController#index as HTML
+  [1m[36mTaskList Load (1.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/todo_list (5.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 29ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists/2/edit" for ::1 at 2015-12-02 21:31:46 -0500
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered task_lists/_form.html.erb (2.0ms)
+  Rendered task_lists/edit.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/task_lists/2" for ::1 at 2015-12-02 21:31:57 -0500
+Processing by TaskListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/BOrUOIe5plJNYMKCPqPwFwMQb5yY9aDTVCSkr4Pjry7BBZb+Of+mgjZ6c5gD5f5DKef+jAojxaJuMEqnILIlQ==", "task_list"=>{"name"=>"School", "description"=>"This is our school list"}, "commit"=>"Update Task list", "id"=>"2"}
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTaskList Exists (1.0ms)[0m  [1mSELECT  1 AS one FROM "task_lists" WHERE ("task_lists"."name" = 'School' AND "task_lists"."id" != 2) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "task_lists" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "task_lists"."id" = ?  [["name", "School"], ["description", "This is our school list"], ["updated_at", "2015-12-03 02:31:57.818567"], ["id", 2]]
+  [1m[36m (210.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/task_lists/2
+Completed 302 Found in 221ms (ActiveRecord: 212.0ms)
+
+
+Started GET "/task_lists/2" for ::1 at 2015-12-02 21:31:58 -0500
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."task_list_id" = ?[0m  [["task_list_id", 2]]
+  Rendered task_lists/show.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 30ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:32:01 -0500
+Processing by TaskListsController#index as HTML
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.9ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/3/edit" for ::1 at 2015-12-02 21:32:05 -0500
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered task_lists/_form.html.erb (2.0ms)
+  Rendered task_lists/edit.html.erb within layouts/todo_list (3.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/task_lists/3" for ::1 at 2015-12-02 21:32:41 -0500
+Processing by TaskListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LlEKDU5AbUDUGjtMUi72Fl7k8mxGZFzW/2NqrTz2rSdpRrcGVLl1Q5X2UYg62+4vDk8sKAQvBUM7izkVHnvrDg==", "task_list"=>{"name"=>"Work", "description"=>"Fix XML Input Script\r\nFix Premium Seating Bug"}, "commit"=>"Update Task list", "id"=>"3"}
+  [1m[36mTaskList Load (1.0ms)[0m  [1mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTaskList Exists (0.0ms)[0m  [1mSELECT  1 AS one FROM "task_lists" WHERE ("task_lists"."name" = 'Work' AND "task_lists"."id" != 3) LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "task_lists" SET "name" = ?, "description" = ?, "updated_at" = ? WHERE "task_lists"."id" = ?  [["name", "Work"], ["description", "Fix XML Input Script\r\nFix Premium Seating Bug"], ["updated_at", "2015-12-03 02:32:42.009484"], ["id", 3]]
+  [1m[36m (240.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/task_lists/3
+Completed 302 Found in 250ms (ActiveRecord: 242.7ms)
+
+
+Started GET "/task_lists/3" for ::1 at 2015-12-02 21:32:42 -0500
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."task_list_id" = ?[0m  [["task_list_id", 3]]
+  Rendered task_lists/show.html.erb within layouts/todo_list (6.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 31ms (Views: 28.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:32:43 -0500
+Processing by TaskListsController#index as HTML
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/todo_list (4.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-02 21:32:58 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (5.0ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (6.0ms)
+  [1m[36mTaskList Load (1.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:32:59 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 30ms (Views: 28.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/tasks" for ::1 at 2015-12-02 21:33:00 -0500
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (1.0ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/todo_list (53.3ms)
+  [1m[36mTaskList Load (1.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 80ms (Views: 76.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:33:07 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:33:17 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (1.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (7.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:33:17 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:33:34 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 28ms (Views: 28.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:33:35 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:34:21 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:34:21 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:34:38 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (6.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 29ms (Views: 29.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:34:38 -0500
+
+
+Started GET "/task_lists" for ::1 at 2015-12-02 21:34:42 -0500
+Processing by TaskListsController#index as HTML
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered task_lists/index.html.erb within layouts/todo_list (3.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:34:43 -0500
