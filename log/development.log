@@ -6476,3 +6476,143 @@ Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/site.self-41f6bb121bc62833073ac6ff3c50222205730a42b1c8666dc5ad212045ebba04.css?body=1" for ::1 at 2015-12-02 21:34:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151208203138)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (46.9ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151208203138"]]
+  [1m[36m (78.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-08 15:32:18 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/todo_list (12.0ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 625ms (Views: 524.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-12-08 15:32:22 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (32.0ms)
+  Rendered users/new.html.erb within layouts/todo_list (40.0ms)
+  [1m[35mTaskList Load (4.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 64ms (Views: 56.0ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-12-08 15:32:33 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lZ5L6pV4Ys2KcImquZdSzgiei+3mw+HCB8bRuTzKmbzC9zJOdGk9+1nThsNvpYKuyzLtJT/DxNoiISS0ejey6g==", "user"=>{"first_name"=>"Rya", "last_name"=>"Tick", "username"=>"rtick", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  INSERT INTO "users" ("first_name", "last_name", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["first_name", "Rya"], ["last_name", "Tick"], ["username", "rtick"], ["password", "password"], ["created_at", "2015-12-08 20:32:33.437163"], ["updated_at", "2015-12-08 20:32:33.437163"]]
+  [1m[36m (105.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 125ms (ActiveRecord: 109.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-12-08 15:32:33 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered users/show.html.erb within layouts/todo_list (0.0ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 40ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-08 15:32:35 -0500
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.0ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/todo_list (4.0ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 28ms (Views: 28.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-12-08 15:32:37 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (0.0ms)
+  Rendered users/new.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 30ms (Views: 30.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-08 15:32:38 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/todo_list (0.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 24ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2015-12-08 15:32:40 -0500
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/edit.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 32ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started PATCH "/users/1" for 127.0.0.1 at 2015-12-08 15:32:43 -0500
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Js7C2fXZjAyXHFS6KkSFBg+dpELRv2dk8zVPSYbH1IJxp7t9FMjTOkS/W9P8dlVmzDHCigi/QnzW0rpEwDr/1A==", "user"=>{"first_name"=>"Ryan", "last_name"=>"Tick", "username"=>"rtick", "password"=>"[FILTERED]"}, "commit"=>"Update User", "id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mUPDATE "users" SET "first_name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["first_name", "Ryan"], ["updated_at", "2015-12-08 20:32:43.224367"], ["id", 1]]
+  [1m[35m (110.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 200ms (ActiveRecord: 110.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-12-08 15:32:43 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered users/show.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 52ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-08 15:32:44 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/todo_list (4.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 28ms (Views: 24.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2015-12-08 15:32:49 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (4.0ms)
+  Rendered users/new.html.erb within layouts/todo_list (4.0ms)
+  [1m[36mTaskList Load (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2015-12-08 15:33:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i4rLSKZo32R7xqIGlL2QmF+ArsEbih2J+5YB8QTm1gbc47LsR3mAUqhlrW9Cj0D4nCzICcKKOJHecfT8Qhv9UA==", "user"=>{"first_name"=>"First", "last_name"=>"Last", "username"=>"flast", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.0ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "First"], ["last_name", "Last"], ["username", "flast"], ["password", "password2"], ["created_at", "2015-12-08 20:33:07.114055"], ["updated_at", "2015-12-08 20:33:07.114055"]]
+  [1m[35m (126.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 138ms (ActiveRecord: 126.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-12-08 15:33:07 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered users/show.html.erb within layouts/todo_list (0.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 52ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-12-08 15:33:08 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/todo_list (2.0ms)
+  [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 22ms (Views: 22.0ms | ActiveRecord: 0.0ms)
