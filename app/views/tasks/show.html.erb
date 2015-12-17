@@ -27,7 +27,12 @@
 
 <p>
   <strong>Task list:</strong>
-  <%= @task.task_list_id %>
+  <%= @task.task_list.name %>
+</p>
+
+<p>
+  <strong>Assigned to:</strong>
+  <%= @task.user.username %>
 </p>
 
 <%= link_to 'Edit', edit_task_path(@task) %> |

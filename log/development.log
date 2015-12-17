@@ -7605,3 +7605,380 @@ Processing by TaskListsController#show as HTML
   Rendered task_lists/show.html.erb within layouts/todo_list (0.0ms)
   [1m[35mTaskList Load (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
 Completed 200 OK in 28ms (Views: 28.0ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "task_lists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "priority" integer, "due_date" date, "is_complete_toggle" boolean, "task_list_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer) 
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "password" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151208203444')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151110184616')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151110184705')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151208203138')[0m
+
+
+Started GET "/" for ::1 at 2015-12-16 19:17:32 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-12-16 19:17:32 -0500
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/todo_list (1.4ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 117ms (Views: 116.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/site.self-966a36e84ab963ee4b44722c42b62a9ae3242f655e6a003e5e04947f2a2100b9.css?body=1" for ::1 at 2015-12-16 19:17:32 -0500
+
+
+Started GET "/users" for ::1 at 2015-12-16 19:17:57 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/todo_list (5.5ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 18ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for ::1 at 2015-12-16 19:17:57 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/todo_list (1.4ms)
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2015-12-16 19:18:00 -0500
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (13.1ms)
+  Rendered users/new.html.erb within layouts/todo_list (15.4ms)
+  [1m[36mTaskList Load (0.1ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/users" for ::1 at 2015-12-16 19:18:05 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Jj5yDF2XWr1Ikr1YGFN6neRhTbhl8AfDHYiCBnoMDaouTkr9/i6Xm5vN7Vuobsuj8OlfcFDtjlPDpWOJevGUfQ==", "user"=>{"first_name"=>"jarp", "last_name"=>"jarp", "username"=>"jarp", "password"=>"[FILTERED]"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("first_name", "last_name", "username", "password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "jarp"], ["last_name", "jarp"], ["username", "jarp"], ["password", "jarp"], ["created_at", "2015-12-17 00:18:05.871174"], ["updated_at", "2015-12-17 00:18:05.871174"]]
+  [1m[35m (1.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/users/3" for ::1 at 2015-12-16 19:18:05 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered users/show.html.erb within layouts/todo_list (0.6ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 13ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for ::1 at 2015-12-16 19:18:08 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/todo_list (1.2ms)
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 19:18:16 -0500
+Processing by HomeController#index as HTML
+Redirected to http://localhost:3000/login
+Filter chain halted as :require_login rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-12-16 19:18:16 -0500
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/todo_list (0.4ms)
+  [1m[36mTaskList Load (0.3ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for ::1 at 2015-12-16 19:18:19 -0500
+Processing by LoginController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"u7JvqOPjP/j6nUr7PJ5iiisNiv2UvyecSBeUscj70iGzwldZQFry3inCGviMo9O0P4WYNaGirgyWOnU+yAZL9g==", "username"=>"jarp", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? AND "users"."password" = ? LIMIT 1  [["username", "jarp"], ["password", "jarp"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 19:18:19 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered home/index.html.erb within layouts/todo_list (16.3ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 24ms (Views: 23.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-16 19:18:23 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (2.2ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (3.3ms)
+  [1m[36mTaskList Load (0.1ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/task_lists" for ::1 at 2015-12-16 19:18:28 -0500
+Processing by TaskListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5cuxGbZesWDVmtlTod5XfkzhN/onEc7MnooGadNOvUHtu4noFed8RgbFiVAR4+ZAWGklMhIMR1xAp+fm07Mklg==", "task_list"=>{"name"=>"test", "description"=>"test"}, "commit"=>"Create Task list"}
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mTaskList Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "task_lists" WHERE "task_lists"."name" = 'test' LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "task_lists" ("name", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["name", "test"], ["description", "test"], ["created_at", "2015-12-17 00:18:28.193357"], ["updated_at", "2015-12-17 00:18:28.193357"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/task_lists/9
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/task_lists/9" for ::1 at 2015-12-16 19:18:28 -0500
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."task_list_id" = ?[0m  [["task_list_id", 9]]
+  Rendered task_lists/show.html.erb within layouts/todo_list (2.5ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 19:18:33 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.0ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered home/index.html.erb within layouts/todo_list (0.7ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/task_lists/new" for ::1 at 2015-12-16 19:18:37 -0500
+Processing by TaskListsController#new as HTML
+  Rendered task_lists/_form.html.erb (1.2ms)
+  Rendered task_lists/new.html.erb within layouts/todo_list (2.2ms)
+  [1m[36mTaskList Load (0.1ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks" for ::1 at 2015-12-16 19:18:46 -0500
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/todo_list (11.6ms)
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 23ms (Views: 21.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/tasks" for ::1 at 2015-12-16 19:18:46 -0500
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/index.html.erb within layouts/todo_list (2.8ms)
+  [1m[36mTaskList Load (0.1ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/new" for ::1 at 2015-12-16 19:18:51 -0500
+Processing by TasksController#new as HTML
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  Rendered tasks/_form.html.erb (8.5ms)
+  Rendered tasks/new.html.erb within layouts/todo_list (9.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 17ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/tasks" for ::1 at 2015-12-16 19:19:03 -0500
+Processing by TasksController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qDZnc1AcPhP03uNqn+nIOlFnM8+hY2p19gPqlV/3GCSgRl+C86XzNSeBs2kv1HkERe8hB5R+4+UoLgsaXwqB8w==", "task"=>{"title"=>"test", "description"=>"asdf", "priority"=>"2", "due_date(1i)"=>"2015", "due_date(2i)"=>"12", "due_date(3i)"=>"17", "is_complete_toggle"=>"0", "task_list_id"=>"1"}, "commit"=>"Create Task"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tasks" ("title", "description", "priority", "is_complete_toggle", "task_list_id", "due_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "test"], ["description", "asdf"], ["priority", 2], ["is_complete_toggle", "f"], ["task_list_id", 1], ["due_date", "2015-12-17"], ["created_at", "2015-12-17 00:19:03.147564"], ["updated_at", "2015-12-17 00:19:03.147564"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/tasks/6" for ::1 at 2015-12-16 19:19:03 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered tasks/show.html.erb within layouts/todo_list (0.7ms)
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/tasks/6" for ::1 at 2015-12-16 19:20:00 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered tasks/show.html.erb within layouts/todo_list (0.3ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/site.self-966a36e84ab963ee4b44722c42b62a9ae3242f655e6a003e5e04947f2a2100b9.css?body=1" for ::1 at 2015-12-16 19:20:00 -0500
+
+
+Started GET "/tasks/6/edit" for ::1 at 2015-12-16 19:20:03 -0500
+Processing by TasksController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered tasks/_form.html.erb (5.4ms)
+  Rendered tasks/edit.html.erb within layouts/todo_list (6.4ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/tasks/6" for ::1 at 2015-12-16 19:20:07 -0500
+Processing by TasksController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EYO9D9cNM8ijJUE7HJnGwub3napPi0DM0PbzrB59XSwZ84X+dLT+7nB6ETispHf88n+PYnqWyVwO2xIjHoDE+w==", "task"=>{"title"=>"test", "description"=>"asdf", "priority"=>"2", "due_date(1i)"=>"2015", "due_date(2i)"=>"12", "due_date(3i)"=>"17", "is_complete_toggle"=>"0", "task_list_id"=>"1", "user_id"=>"3"}, "commit"=>"Update Task", "id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tasks" SET "user_id" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["user_id", 3], ["updated_at", "2015-12-17 00:20:07.340764"], ["id", 6]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/tasks/6
+Completed 302 Found in 6ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/tasks/6" for ::1 at 2015-12-16 19:20:07 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered tasks/show.html.erb within layouts/todo_list (0.3ms)
+  [1m[35mTaskList Load (0.2ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 9ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2015-12-16 19:20:38 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/show.html.erb within layouts/todo_list (5.4ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/site.self-966a36e84ab963ee4b44722c42b62a9ae3242f655e6a003e5e04947f2a2100b9.css?body=1" for ::1 at 2015-12-16 19:20:38 -0500
+
+
+Started GET "/tasks/6" for ::1 at 2015-12-16 19:20:51 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered tasks/show.html.erb within layouts/todo_list (4.8ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `title' for #<TaskList:0x000001028342c8>):
+    27: 
+    28: <p>
+    29:   <strong>Task list:</strong>
+    30:   <%= @task.task_list.title %>
+    31: </p>
+    32: 
+    33: <p>
+  app/views/tasks/show.html.erb:30:in `_app_views_tasks_show_html_erb__2766665097415768082_2156641480'
+
+
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.3ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.9ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/jarp/.rvm/gems/ruby-2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (22.2ms)
+
+
+Started GET "/tasks/6" for ::1 at 2015-12-16 19:20:56 -0500
+Processing by TasksController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/show.html.erb within layouts/todo_list (2.9ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/site.self-966a36e84ab963ee4b44722c42b62a9ae3242f655e6a003e5e04947f2a2100b9.css?body=1" for ::1 at 2015-12-16 19:20:56 -0500
+
+
+Started GET "/tasks" for ::1 at 2015-12-16 19:20:59 -0500
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/index.html.erb within layouts/todo_list (1.9ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-16 19:21:10 -0500
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-12-16 19:21:10 -0500
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/todo_list (0.4ms)
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2015-12-16 19:21:12 -0500
+Processing by LoginController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AjdQJPU1DRbHtsAa49zdRx8hV0g+kdptZANFP9kh4H8KR2jVVozAMBTpkBlT4Wx5C6lFgAuMU/26LqSw2dx5qA==", "username"=>"jarp", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? AND "users"."password" = ? LIMIT 1  [["username", "jarp"], ["password", "jarp"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2015-12-16 19:21:12 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT "tasks".* FROM "tasks" WHERE "tasks"."user_id" = ?[0m  [["user_id", 3]]
+  Rendered home/index.html.erb within layouts/todo_list (0.8ms)
+  [1m[35mTaskList Load (0.1ms)[0m  SELECT "task_lists".* FROM "task_lists"
+Completed 200 OK in 16ms (Views: 15.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/logout" for ::1 at 2015-12-16 19:21:14 -0500
+Processing by LoginController#logout as HTML
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2015-12-16 19:21:14 -0500
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/todo_list (0.5ms)
+  [1m[36mTaskList Load (0.1ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 9ms (Views: 8.9ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/login" for ::1 at 2015-12-16 19:21:16 -0500
+Processing by LoginController#authenticate as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pYVjkW6xA0ERMz85TE0zcIbt56isAZc/GdbB0AcYg9Wt9VtgzQjOZ8Jsbzr8cIJOkmX1YJkcHq/H+yBfB+UaAg==", "username"=>"jarp", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."username" = ? AND "users"."password" = ? LIMIT 1  [["username", "jarp"], ["password", "jarpsdf"]]
+Redirected to http://localhost:3000/login
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/login" for ::1 at 2015-12-16 19:21:16 -0500
+Processing by LoginController#index as HTML
+  Rendered login/index.html.erb within layouts/todo_list (0.3ms)
+  [1m[36mTaskList Load (0.2ms)[0m  [1mSELECT "task_lists".* FROM "task_lists"[0m
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms)
